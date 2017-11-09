@@ -20,7 +20,7 @@ The issue of the world\'s fresshwater consumption has been tradititonally studie
 With the establishment of the Watef Footprint Network, public can get access to numerous studies on global water consumption over the last decade and see the vast imbalance of water usage accross the world. But the study results are mostly presented via a form of exploratory analyses, indicating key areas of extreme water footprint imbalance or the water resrouce scarcity. More hidden patterns of global water footprint woudl be discovered by applying more data science oriented approaches (time series analysis, anomaly detection for example).
 
 There is also no optimization model which aims at reducing global water consumption in total and mediating water resource exploitation disparity. Therefore in this project I plan to accomplish the following:
-  -- 1. synthesize the datasets of water footprint, water scarcity, international trade, water intentensity of products 
-  -- 2. extend the studies of Prof. Arjen Hoekstra by building visualization dashboards using R Shiny app to give the user a more flexible way to discover global water footprint patterns.
-  -- 3. establish models to automatically detect outlier countries/regions of high water footprint or rapid growth thereof.
-  -- 4. make recommendations to the change of trading patterns at the country - product category level.
+  - 1. synthesize the datasets of water footprint, water scarcity, international trade, water intentensity of products 
+  - 2. extend the studies of Prof. Arjen Hoekstra by building visualization dashboards using R Shiny app to give the user a more flexible way to discover global water footprint patterns.
+  - 3. establish models to automatically detect outlier countries/regions of high water footprint or rapid growth thereof.
+  - 4. make recommendations to the change of trading patterns at the country - product category level.
