@@ -9,10 +9,11 @@ Datasets from the Water Footprint Network, licensed under [CC BY-SA 3.0](https:/
 * National Water Footprint dataset: http://waterfootprint.org/en/resources/water-footprint-statistics/#CP3
 * International Virtual Water Flow Statistics: http://waterfootprint.org/en/resources/water-footprint-statistics/#CP4
 
-Dataset from the World Bank, licensed under World Bank's [Ristricted Data](https://data.worldbank.org/restricted-data)
+Dataset from the World Bank, licensed under World Bank's [Ristricted Data](https://data.worldbank.org/restricted-data) license.
 
 * Per-Capita GDP by country: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2016&start=1996
-The Terms of Use page of this dataset listed the datasets provided by third parties other than the World Bank, which shall not be used without the consent of the original provider. The dataset I use was not among the list and therefore may be redistributed and reused without prior consent or other restrictions, as described in the World Bank's [Open Data Terms of Use](https://data.worldbank.org/summary-terms-of-use)
+
+The World Banks's Ristricted Data License page listed the datasets provided by third parties other than the World Bank, which shall not be used without the consent of the original provider. The dataset I used was not among the list and therefore may be redistributed and reused without prior consent or other restrictions, as described in the World Bank's [Open Data Terms of Use](https://data.worldbank.org/summary-terms-of-use).
 
 ### Research Questions
 
