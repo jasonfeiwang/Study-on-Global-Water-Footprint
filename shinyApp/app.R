@@ -58,50 +58,50 @@ ui <- navbarPage("",
                                      )
                             )
                  ),
-                 navbarMenu("Per Capita Analysis",
-                            tabPanel("Global Distribution",
-                                     sidebarLayout(
-                                       sidebarPanel(
-                                         sliderInput("year", "Select a year:", min = 2005, max = 2015, value = 2005, step = 1),
-                                         radioButtons("countries_percapita", "Order of Countries:", c("Descending"="top", "Ascending"="bottom")),
-                                         checkboxGroupInput("producttype_percapita", "Related Products:", choices = c("Crop"="crop", "Animal"="animal", "Industrial"="industrial"),
-                                                            selected = c("Crop"="crop", "Animal"="animal", "Industrial"="industrial")),
-                                         checkboxGroupInput("watertype_percapita", "Water Types:", choices = c("Green"="green", "Blue"="blue", "Grey"="grey"),
-                                                            selected = c("Green"="green", "Blue"="blue", "Grey"="grey"))
-                                       ),
-                                       mainPanel(
-                                         bsCollapsePanel(title = div(icon("check-square-o"), "Export: top and bottom countries"),
-                                                         style = "success",
-                                                         ""),
-                                         tabsetPanel(
-                                           tabPanel("Table", dataTableOutput("topbottomTable_percapita")),
-                                           tabPanel("Map", br(), br(), plotlyOutput("percapitaMap", height = "600px", width = "1100px"),
-                                                    p("Note: Per Capita in Millions of m3 is plused by one and then transformed on log Scale (base 10).", align = 'center'))
-                                         )
-                                       )
-                                     )
-                                     
-                            ),
-                            tabPanel("Ranking Per Country",
-                                     sidebarLayout(
-                                       sidebarPanel(
-                                         # sliderInput("year", "Select a year:", min = 2005, max = 2015, value = 2005, step = 1),
-                                         radioButtons("countries_percapita_change", "Order of Countries:", c("Descending"="top", "Ascending"="bottom"))
-                                       ),
-                                       mainPanel(
-                                         bsCollapsePanel(title = div(icon("check-square-o"), "Export: per capita change"),
-                                                         style = "success",
-                                                         ""),
-                                         tabsetPanel(
-                                           tabPanel("Table", dataTableOutput("topbottomTable_percapita_change")),
-                                           tabPanel("Plot", br(), br(), plotlyOutput("topbottomTable_percapita_change_plot", height = "600px", width = "1000px"))
-                                         )
-                                         
-                                       )
-                                     )
-                                     
-                            )
-                 ),
+                 #                navbarMenu("Per Capita Analysis",
+                 #                             tabPanel("Global Distribution",
+                 #                                      sidebarLayout(
+                 #                                        sidebarPanel(
+                 #                                          sliderInput("year", "Select a year:", min = 2005, max = 2015, value = 2005, step = 1),
+                 #                                          radioButtons("countries_percapita", "Order of Countries:", c("Descending"="top", "Ascending"="bottom")),
+                 #                                          checkboxGroupInput("producttype_percapita", "Related Products:", choices = c("Crop"="crop", "Animal"="animal", "Industrial"="industrial"),
+                 #                                                             selected = c("Crop"="crop", "Animal"="animal", "Industrial"="industrial")),
+                 #                                          checkboxGroupInput("watertype_percapita", "Water Types:", choices = c("Green"="green", "Blue"="blue", "Grey"="grey"),
+                 #                                                             selected = c("Green"="green", "Blue"="blue", "Grey"="grey"))
+                 #                                        ),
+                 #                                        mainPanel(
+                 #                                          bsCollapsePanel(title = div(icon("check-square-o"), "Export: top and bottom countries"),
+                 #                                                          style = "success",
+                 #                                                          ""),
+                 #                                          tabsetPanel(
+                 #                                            tabPanel("Table", dataTableOutput("topbottomTable_percapita")),
+                 #                                            tabPanel("Map", br(), br(), plotlyOutput("percapitaMap", height = "600px", width = "1100px"),
+                 #                                                     p("Note: Per Capita in Millions of m3 is plused by one and then transformed on log Scale (base 10).", align = 'center'))
+                 #                                          )
+                 #                                        )
+                 #                                      )
+                 
+                 #                             ),
+                 #                             tabPanel("Ranking Per Country",
+                 #                                      sidebarLayout(
+                 #                                        sidebarPanel(
+                 #                                          # sliderInput("year", "Select a year:", min = 2005, max = 2015, value = 2005, step = 1),
+                 #                                          radioButtons("countries_percapita_change", "Order of Countries:", c("Descending"="top", "Ascending"="bottom"))
+                 #                                        ),
+                 #                                        mainPanel(
+                 #                                          bsCollapsePanel(title = div(icon("check-square-o"), "Export: per capita change"),
+                 #                                                          style = "success",
+                 #                                                          ""),
+                 #                                          tabsetPanel(
+                 #                                            tabPanel("Table", dataTableOutput("topbottomTable_percapita_change")),
+                 #                                            tabPanel("Plot", br(), br(), plotlyOutput("topbottomTable_percapita_change_plot", height = "600px", width = "1000px"))
+                 #                                          )
+                 
+                 #                                        )
+                 #                                      )
+                 
+                 #                             )
+                 #                  ),
                  tags$style(type = 'text/css',
                             '.navbar { font-family: Arial; font-size: 19px; }',
                             '.navbar-dropdown { font-family: Arial; font-size: 29px; }')

@@ -1,0 +1,12 @@
+name: GlobalWaterFootprint
+title: GlobalWaterFootprint
+username:
+account: feiwang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 247061
+bundleId: 1127479
+url: https://feiwang.shinyapps.io/GlobalWaterFootprint/
+when: 1512972597.06833
+asMultiple: FALSE
+asStatic: FALSE
