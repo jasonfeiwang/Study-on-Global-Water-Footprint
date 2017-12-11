@@ -19,8 +19,8 @@ Datasets from the Water Footprint Network, licensed under [CC BY-SA 3.0](https:/
   - Dataset of Global Water Footprint Per Capita by country (1996-2005 annual averages): Report50-Appendix-VIII&IX.xls
 
 * Transformed Datasets are saved under Data/
-- Dataset of Global Virtual Water Flow (1996-2005 annual averages): dfWaterFlow.RData and GlobalVirtualWaterFlow.csv
-- Dataset of Global Water Footprint Per Capita by country (1996-2005 annual averages): dfWFPC.RData and WFPerCapita.csv
+  - Dataset of Global Virtual Water Flow (1996-2005 annual averages): dfWaterFlow.RData and GlobalVirtualWaterFlow.csv
+  - Dataset of Global Water Footprint Per Capita by country (1996-2005 annual averages): dfWFPC.RData and WFPerCapita.csv
 
 ###  References
 
