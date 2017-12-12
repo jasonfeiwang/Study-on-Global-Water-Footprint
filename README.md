@@ -14,9 +14,10 @@ Datasets from the Water Footprint Network, licensed under [CC BY-SA 3.0](https:/
 
 ### Datasets
 
-* Original Datasets are saved under Data/original datasets/
+* Original Datasets are saved under Data/original datasets/ (Both datasets are associated with [1] in the References section)
   - Dataset of Global Virtual Water Flow (1996-2005 annual averages): Report50-Appendix-II&III.xls
   - Dataset of Global Water Footprint Per Capita by country (1996-2005 annual averages): Report50-Appendix-VIII&IX.xls
+
 
 * Transformed Datasets are saved under Data/
   - Dataset of Global Virtual Water Flow (1996-2005 annual averages): dfWaterFlow.RData and GlobalVirtualWaterFlow.csv
@@ -24,7 +25,7 @@ Datasets from the Water Footprint Network, licensed under [CC BY-SA 3.0](https:/
 
 ###  References
 
-* Mekonnen, M.M. and Hoekstra, A.Y. (2011) National water footprint accounts: [The green, blue and grey water footprint of production and consumption](http://www.waterfootprint.org/Reports/Report50-NationalWaterFootprints-Vol1.pdf), Value of Water Research Report Series No. 50, UNESCO-IHE, Delft, the Netherlands
-* Hoekstra, A.Y. and Mekonnen, M.M. (2012) [The water footprint of humanity](http://waterfootprint.org/media/downloads/Hoekstra-Mekonnen-2012-WaterFootprint-of-Humanity.pdf), Proceedings of the National Academy of Sciences, 109(9): 3232–3237.
-* Mekonnen, M.M. and Hoekstra, A.Y. (2011) [The green, blue and grey water footprint of crops and derived crop products](http://waterfootprint.org/media/downloads/Mekonnen-Hoekstra-2011-WaterFootprintCrops.pdf), Hydrology and Earth System Sciences, 15(5): 1577-1600.
-* Arjen Hoekstra et al.(2011), [The Water Footprint Assessment Manual](http://waterfootprint.org/media/downloads/TheWaterFootprintAssessmentManual_2.pdf)
+* [1] Mekonnen, M.M. and Hoekstra, A.Y. (2011) National water footprint accounts: [The green, blue and grey water footprint of production and consumption](http://www.waterfootprint.org/Reports/Report50-NationalWaterFootprints-Vol1.pdf), Value of Water Research Report Series No. 50, UNESCO-IHE, Delft, the Netherlands
+* [2] Hoekstra, A.Y. and Mekonnen, M.M. (2012) [The water footprint of humanity](http://waterfootprint.org/media/downloads/Hoekstra-Mekonnen-2012-WaterFootprint-of-Humanity.pdf), Proceedings of the National Academy of Sciences, 109(9): 3232–3237.
+* [3] Mekonnen, M.M. and Hoekstra, A.Y. (2011) [The green, blue and grey water footprint of crops and derived crop products](http://waterfootprint.org/media/downloads/Mekonnen-Hoekstra-2011-WaterFootprintCrops.pdf), Hydrology and Earth System Sciences, 15(5): 1577-1600.
+* [4] Arjen Hoekstra et al.(2011), [The Water Footprint Assessment Manual](http://waterfootprint.org/media/downloads/TheWaterFootprintAssessmentManual_2.pdf)
