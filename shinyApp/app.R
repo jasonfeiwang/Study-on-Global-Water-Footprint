@@ -88,23 +88,8 @@ ui <- navbarPage("",
                                        )
                                      )
                                      
-                            ),
-                            tabPanel("Global distribution",
-                                     sidebarLayout(
-                                       sidebarPanel(
-                                         radioButtons("countries_percapita_change", "Order of Countries:", c("Descending"="top", "Ascending"="bottom"))
-                                       ),
-                                       mainPanel(
-                                         bsCollapsePanel(title = div(icon("check-square-o"), "Per Capita WF: p"),
-                                                         style = "success",
-                                                         ""),
-                                         tabsetPanel(
-                                           tabPanel("Table", dataTableOutput("topbottomTable_percapita_change")),
-                                           tabPanel("Plot", br(), br(), plotlyOutput("topbottomTable_percapita_change_plot", height = "600px", width = "1000px"))
-                                         )
-                                       )
-                                     )
                             )
+
                  ),
                  tags$style(type = 'text/css',
                             '.navbar { font-family: Arial; font-size: 19px; }',

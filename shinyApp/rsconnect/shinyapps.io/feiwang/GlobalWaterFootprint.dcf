@@ -5,8 +5,8 @@ account: feiwang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 247061
-bundleId: 1127479
+bundleId: 1129129
 url: https://feiwang.shinyapps.io/GlobalWaterFootprint/
-when: 1512972597.06833
+when: 1513043100.17471
 asMultiple: FALSE
 asStatic: FALSE
