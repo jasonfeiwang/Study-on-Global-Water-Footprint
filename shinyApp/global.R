@@ -1,5 +1,6 @@
 load('dfWaterFlow.RData')
 load('dfWFPC.RData')
+load('dfWFPC_Summary.RData')
 country_code <- read.csv("country_code.csv")
 
 library(dplyr)

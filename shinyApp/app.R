@@ -88,8 +88,21 @@ ui <- navbarPage("",
                                        )
                                      )
                                      
+                            ),
+                            tabPanel("Anomaly Detection",
+                                     sidebarLayout(
+                                       sidebarPanel(
+                                       ),
+                                       mainPanel(
+                                         bsCollapsePanel(title = div(icon("check-square-o"), "Anomaly Detection for WF-Per-Capita"),
+                                                         style = "success",
+                                                         ""),
+                                         tabsetPanel(
+                                           tabPanel("Plot", br(), br(), plotlyOutput("anomalyDetectionPlot_percapita", height = "600px", width = "1000px"))
+                                         )
+                                       )
+                                     )
                             )
-
                  ),
                  tags$style(type = 'text/css',
                             '.navbar { font-family: Arial; font-size: 19px; }',
@@ -368,11 +381,8 @@ server <- function(input, output, session) {
       lengthMenu = c(25, 50)))
   })
   
-  
-  
-  
-  
-  ############################################################################################################################## 
+  ## "Top and bottom countries" page under "Per Capita Analysis" tab
+  # compute the underlying dataframe for datatable object based on the user input parameters
   topbottom_percapita <- reactive({
     if(input$countries_percapita == "top"){
       df = (dfWFPC %>%
@@ -398,7 +408,7 @@ server <- function(input, output, session) {
     return(df)
   })
   
-  
+  # prepare datatable based on the dataframe and set rendering format
   output$topbottomTable_percapita <- renderDataTable({
     df = topbottom_percapita()[, 1:3]
     names(df) = c("Country", "Population", "WF per capita (m3/cap)")
@@ -425,6 +435,52 @@ server <- function(input, output, session) {
              xaxis = list(title = 'Country', tickangle = 45)
       )
   })
+  
+  
+  ## "Anomaly Detection" page under "Per Capita Analysis" tab
+  # prepare the plotly object based on the dataframe dfWFPC_Summary
+  output$anomalyDetectionPlot_percapita <- renderPlotly({
+    plotdata = dfWFPC_Summary[, c(1,2,6)]
+    
+    mu = mean(plotdata$WFPC)
+    sigma = sd(plotdata$WFPC)
+    
+    upper_3std = mu + 3*sigma
+    lower_3std = mu - 3*sigma
+    upper_2std = mu + 2*sigma
+    lower_2std = mu - 2*sigma
+    
+    # plot the WF-Per-Capita for each country
+    plot_ly(plotdata, x = ~row_num, y = ~WFPC, type = 'scatter', name = 'WF-Per-Capita',
+            hoverinfo = 'text',
+            text = ~paste('Country:', country, '<br>WF Per Capita:', prettyNum(WFPC,big.mark=",",scientific=FALSE))
+    ) %>%
+      
+      # overlaying the upper control line
+      add_trace(y = upper_3std, type = 'scatter', mode = 'lines', name = 'Upper Control - 3 Std'
+      ) %>%
+      
+      # overlaying the lower control line
+      add_trace(y = lower_3std, type = 'scatter', mode = 'lines', name = 'Lower Control - 3 Std'
+      ) %>%
+      
+      # overlaying the upper control line
+      add_trace(y = upper_2std, type = 'scatter', mode = 'lines', name = 'Upper Control - 2 Std'
+      ) %>%
+      
+      # overlaying the lower control line
+      add_trace(y = lower_2std, type = 'scatter', mode = 'lines', name = 'Lower Control - 2 Std'
+      ) %>%
+      
+      layout(yaxis = list(title = 'WF Per Capita (m³/cap)', tickformat=","
+      ),
+      margin= list(b = 100, r = 80, l = 100),
+      title = paste0('Anomaly Detection for WF-Per-Capita by country'),
+      xaxis = list(title = 'Countries', showticklabels=FALSE)
+      )
+  })
+  
+  
 }
 
 ## Run the application ####
